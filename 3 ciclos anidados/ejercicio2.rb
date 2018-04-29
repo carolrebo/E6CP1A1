@@ -19,8 +19,18 @@ Generar el código para imprimir la siguiente tabla:
     <td> 9 </td>
     <td> 10 </td>
     <td> 11 </td>
+
     <td> 12 </td>
   </tr>
   <tbody>
  </table>
 =end
+puts "<table>"
+puts "<tbody>"
+ for i in 1..12 #establece 12 filas
+  puts "<tr>" if i == 1 || i == 5 || i == 9
+  puts "\t<td> #{i} </td>"#contenido celda este caso numeros
+  puts "</tr>" if i == 4 || i == 8 || i == 12
+end 
+puts "</table>"
+puts "</tbody>"
